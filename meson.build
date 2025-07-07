@@ -266,6 +266,12 @@ programmer = {
     'test_srcs' : files('tests/ch341a_spi.c'),
     'flags'   : [ '-DCONFIG_CH341A_SPI=1' ],
   },
+  'ast2600' : {
+    'deps'    : [ libpci ],
+    'groups'  : [ group_pci, group_external ],
+    'srcs'    : files('ast2600.c'),
+    'flags'   : [ '-DCONFIG_AST2600=1' ],
+  },
   'ch347_spi' : {
     'deps'    : [ libusb1 ],
     'groups'  : [ group_usb, group_external ],

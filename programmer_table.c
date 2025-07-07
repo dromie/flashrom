@@ -183,6 +183,10 @@ const struct programmer_entry *const programmer_table[] = {
 #if CONFIG_SPIDRIVER == 1
     &programmer_spidriver,
 #endif
+
+#if CONFIG_AST2600 == 1
+    &programmer_ast2600_spi,
+#endif
 };
 
 const size_t programmer_table_size = ARRAY_SIZE(programmer_table);
